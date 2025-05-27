@@ -1,0 +1,29 @@
+// Le tableau ordersList recense un exemple d’achats effectués par un client sur différents sites partenaires, avec un cashback exprimé en pourcentage (ex: 5 vaut 5 %).
+// Le cashback est un montant rétribué au client, venant alimenter une cagnotte dont il peut disposer comme il le souhaite.
+
+// Exercices
+// À l’aide d’une boucle for of, calculez le montant total du cashback et arrondissez-le à 2 décimales avec la méthode toFixed().
+
+// Le total devra être retourné par la fonction cashback.
+
+function cashback(data) {
+  let total = 0;
+
+  // Insert your code here
+  for (let item of data) {
+    item = (item.total * item.cashback) / 100;
+    console.log(item);
+    total += item;
+  }
+
+  return total.toFixed(2);
+}
+
+const ordersList = [
+  { partner: "Carrefour", total: 57.45, cashback: 5 },
+  { partner: "Amazon", total: 60.2, cashback: 3 },
+  { partner: "Boulanger", total: 149, cashback: 6 },
+  { partner: "Fnac", total: 84.15, cashback: 4 },
+];
+console.log(cashback(ordersList));
+// Expected: 16.98
