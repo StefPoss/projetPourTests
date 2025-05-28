@@ -1,4 +1,8 @@
 {
+<<<<<<< HEAD
   "tailwindCSS.experimental.configFile": null,
   "liveServer.settings.port": 5501
+=======
+  "tailwindCSS.experimental.configFile": null
+>>>>>>> 3b87da75bed8fa9c33c625dff94c4a4402b56fab
 }
